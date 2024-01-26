@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Jayesh Rahinj</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #DDC3A5; /* Tan */
+            color: #201E20; /* Black-brown */
+        }
+
+        header {
+            background-color: #201E20; /* Black-brown */
+            color: #DDC3A5; /* Tan */
+            padding: 1em;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-family: 'Arial', sans-serif;
+            color: #fff; /* White */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: flex-end; /* Align to the right */
+            background-color: #201E20; /* Black-brown */
+            padding: 1em 0;
+        }
+
+        nav li {
+            margin: 0 1em;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #DDC3A5; /* Tan */
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #B5BFA1; /* Light Green */
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+        }
+
+        .column {
+            flex-basis: calc(30% - 20px);
+            padding: 20px;
+            background-color: #201E20; /* Black-brown */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            opacity: 0;
+            animation: fadeIn 1s forwards, slideIn 1s forwards;
+            margin-right: 20px; /* Added margin between columns */
+        }
+
+        h2 {
+            color: #DDC3A5; /* Tan */
+        }
+
+        ul {
+            padding: 0;
+            list-style-type: none;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: #DDC3A5; /* Tan */
+        }
+
+        p {
+            color: #201E20; /* Black-brown */
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #B5BFA1; /* Light Green */
+            color: #201E20; /* Black-brown */
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #201E20; /* Black-brown */
+            color: #DDC3A5; /* Tan */
+        }
+
+        footer {
+            background-color: #201E20; /* Black-brown */
+            color: #DDC3A5; /* Tan */
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+
+        .highlight:hover {
+            background-color: #100e00; /* Light Green */
+            color: #201E20; /* Black-brown */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Jayesh Rahinj</h1>
+            <p style=" color: #86BBD8; font-style: italic;
+    margin-top: 0.5em;">Passionate and driven new graduate</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="about.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="row">
+        <div class="column highlight">
+            <h2>Best Buy - Android Application</h2>
+            <ul>
+                <li>Java and XML languages used.</li>
+                <li>An application that helps people buy products smartly by comparing different e-commerce websites.</li>
+                <li>User login and sign up by email ID.</li>
+                <li>For storing the user database, Firebase is used.</li>
+            </ul>
+            <button onclick="window.location.href='https://github.com/jayeshrahinj'">Visit Project</button>
+        </div>
+
+        <div class="column highlight">
+            <h2>Bakery Website</h2>
+            <ul>
+                <li>Dynamic website using HTML, CSS, JavaScript, and Java.</li>
+                <li>Users can log in and sign up by username and password.</li>
+                <li>User information is stored in the MySQL database for connection between MySQL and Java.</li>
+                <li>Users can give feedback to the admin to make this website user-friendly.</li>
+            </ul>
+            <button onclick="window.location.href='https://github.com/jayeshrahinj'">Visit Project</button>
+        </div>
+
+        <div class="column highlight">
+            <h2>Spring Boot API</h2>
+            <ul>
+                <li>Created a Spring Boot API for managing user data.</li>
+                <li>Implemented essential CRUD functionality for user information.</li>
+                <li>Utilized a database to store, retrieve, update, and delete user records using the h2 database.</li>
+            </ul>
+            <button onclick="window.location.href='https://github.com/jayeshrahinj'">Visit Project</button>
+        </div>
+    </div>
+
+    <footer>
+        <p id="profileText" style="color: #E0A96D; font-size: 20px;">&copy; Jayesh Rahinj | Contact: rahinjayesh@gmail.com</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var columns = document.querySelectorAll('.column');
+            columns.forEach((column, index) => {
+                setTimeout(() => {
+                    column.style.opacity = '1';
+                }, index * 200);
+            });
+        });
+    </script>
+</body>
+
+</html>
