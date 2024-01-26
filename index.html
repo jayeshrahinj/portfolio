@@ -13,18 +13,6 @@
             background-color: #DDC3A5; /* Tan */
             color: #201E20; /* Black-brown */
         }
-        /* Media Queries */
-@media screen and (max-width: 768px) {
-    section {
-        padding: 1em;
-    }
-
-    .profile-photo {
-        width: 200px;
-        height: 200px;
-    }
-}
-
 
         header {
             background-color: #201E20; /* Black-brown */
@@ -52,7 +40,7 @@
             padding: 0;
             margin: 0;
             display: flex;
-            justify-content: flex-end; /* Align to the right */
+            justify-content: space-around; /* Adjusted for responsiveness */
             background-color: #201E20; /* Black-brown */
             padding: 1em 0;
         }
@@ -95,6 +83,7 @@
 
         .profile-info {
             max-width: 500px;
+            margin-left: 20px; /* Added margin for spacing */
         }
 
         /* Animation */
@@ -140,22 +129,12 @@
             width: 100%;
         }
 
-        .profile-container {
-            width: 300px;
-            height: 300px;
-            border: 2px solid #201E20; /* Black-brown */
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        /* Paragraph Styles */
+        .paragraph1 {
+            font-size: 20px;
         }
 
-        p {
-            color: #201E20; /* Black-brown */
-            font-weight: bold;
-            text-align: center;
-        }
-
+        /* Button Styles */
         button {
             margin-top: 20px;
             padding: 10px;
@@ -165,13 +144,22 @@
             cursor: pointer;
         }
 
-        .paragraph1 {
-            font-size: 20px;
-        }
-
         button:hover {
             background-color: #201E20; /* Black-brown */
             color: #DDC3A5; /* Tan */
+        }
+
+        /* Media Queries for Responsiveness */
+        @media screen and (max-width: 768px) {
+            section {
+                flex-direction: column; /* Stack items vertically on small screens */
+                text-align: center; /* Center-align content on small screens */
+            }
+
+            .profile-info {
+                margin-left: 0; /* Remove left margin for smaller screens */
+                margin-top: 20px; /* Add top margin for spacing on small screens */
+            }
         }
     </style>
 </head>
@@ -182,18 +170,18 @@
         <p>Passionate and driven new graduate</p>
         <nav>
             <ul>
-                 <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="project.html">Projects</a></li>
                 <li><a href="skills.html">Skills</a></li>
                 <li><a href="experience.html">Experience</a></li>
-                 <li><a href="about.html"></a></li>
+                <li><a href="about.html"></a></li>
             </ul>
         </nav>
     </header>
 
     <section>
+        <img src="image/myimage.jpg" alt="Jayesh Rahinj" class="profile-photo">
         <div class="profile-info">
-           
             <p id="profileText" style="color: #E0A96D;" class="paragraph1">
                 "As a fresh IT grad, I'm like software – constantly updating, occasionally buggy, but always ready to bring a smile to your face." </p>
 
@@ -203,7 +191,6 @@
                  Add other social media icons as needed 
             </div> -->
         </div>
-        <img src="https://avatars.githubusercontent.com/u/103485215?s=400&u=c59b8bd41f8f06dd6da33147dea11e3833fa1384&v=4" alt="Jayesh Rahinj" class="profile-photo">
     </section>
 
     <footer>
