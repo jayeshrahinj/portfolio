@@ -55,19 +55,20 @@
 
         .row {
             display: flex;
+            flex-wrap: wrap; /* Allow the columns to wrap to the next line on smaller screens */
             justify-content: space-between;
             margin: 20px;
         }
 
         .column {
             flex-basis: calc(30% - 20px);
+            margin-bottom: 20px; /* Added margin between columns */
             padding: 20px;
             background-color: #201E20; /* Black-brown */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             opacity: 0;
             animation: fadeIn 1s forwards, slideIn 1s forwards;
-            margin-right: 20px; /* Added margin between columns */
         }
 
         h2 {
@@ -112,7 +113,6 @@
             bottom: 0;
             width: 100%;
         }
-        
 
         .highlight:hover {
             background-color: #100e00; /* Light Green */
@@ -136,14 +136,20 @@
                 transform: translateY(0);
             }
         }
+
+        /* Media Queries for Responsiveness */
+        @media screen and (max-width: 768px) {
+            .column {
+                flex-basis: 100%; /* Full width on smaller screens */
+            }
+        }
     </style>
 </head>
 
 <body>
     <header>
         <h1>Jayesh Rahinj</h1>
-            <p style=" color: #86BBD8; font-style: italic;
-    margin-top: 0.5em;">Passionate and driven new graduate</p>
+        <p style="color: #86BBD8; font-style: italic; margin-top: 0.5em;">Passionate and driven new graduate</p>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
