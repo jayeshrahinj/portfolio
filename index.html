@@ -13,6 +13,7 @@
             background-color: #DDC3A5; /* Tan */
             color: #201E20; /* Black-brown */
             overflow-y: auto; /* Added to make the page scrollable */
+            margin-bottom: 60px; /* Adjusted to the height of the footer */
         }
 
         header {
@@ -65,8 +66,9 @@
             display: flex;
             justify-content: space-evenly;
             align-items: center;
+            flex-direction: column; /* Adjusted for responsiveness */
             padding: 2em;
-            text-align: left;
+            text-align: center; /* Center-align content on small screens */
             background-color: #201E20; /* Black-brown */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
@@ -84,7 +86,7 @@
 
         .profile-info {
             max-width: 500px;
-            margin-left: 20px; /* Added margin for spacing */
+            margin-top: 20px; /* Add top margin for spacing on small screens */
         }
 
         /* Animation */
@@ -152,22 +154,17 @@
 
         /* Media Queries for Responsiveness */
         @media screen and (max-width: 768px) {
-            section {
-                flex-direction: column; /* Stack items vertically on small screens */
-                text-align: center; /* Center-align content on small screens */
+            nav ul {
+                flex-direction: column;
+                align-items: center;
             }
-               nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    nav li {
-        margin: 0.5em 0;
-    }
+            nav li {
+                margin: 0.5em 0;
+            }
 
             .profile-info {
                 margin-left: 0; /* Remove left margin for smaller screens */
-                margin-top: 20px; /* Add top margin for spacing on small screens */
             }
         }
     </style>
@@ -183,8 +180,7 @@
                 <li><a href="project.html">Projects</a></li>
                 <li><a href="skills.html">Skills</a></li>
                 <li><a href="experience.html">Experience</a></li>
-                 <li><a href="about.html">Profile</a></li>
-
+                <li><a href="about.html">Profile</a></li>
             </ul>
         </nav>
     </header>
@@ -194,12 +190,11 @@
         <div class="profile-info">
             <p id="profileText" style="color: #E0A96D;" class="paragraph1">
                 "As a fresh IT grad, I'm like software – constantly updating, occasionally buggy, but always ready to bring a smile to your face." </p>
-
             <!-- Social Media Navigation -->
-            <!-- <div class="social-media">
-                <a href="https://www.linkedin.com/in/jayesh-rahinj-b56359217/" target="_blank">&#128279;</a>
-                 Add other social media icons as needed 
-            </div> -->
+            <div class="social-media">
+                <!-- <a href="https://www.linkedin.com/in/jayesh-rahinj-b56359217/" target="_blank">&#128279;</a> -->
+                <!-- Add other social media icons as needed -->
+            </div>
         </div>
     </section>
 
